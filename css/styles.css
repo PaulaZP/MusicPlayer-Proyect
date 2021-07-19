@@ -87,14 +87,6 @@ canvas {
   margin-left: 200px;
   margin-top: 100px; }
 
-.menu ul {
-  list-style: none;
-  padding: 100px 0 0 100px; }
-
-.menu li {
-  float: left;
-  margin-right: 100px; }
-
 body {
   margin: 0px;
   padding: 0px; }
@@ -207,3 +199,69 @@ body {
   font-weight: bold;
   padding: 10px 149px;
   text-decoration: none; }
+
+.wrapper-sesion {
+  background-image: url(../img/background-1.png);
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  height: 1024px;
+  margin: 0 auto;
+  width: 100%; }
+
+.box-artist {
+  float: left;
+  width: 1000px; }
+
+.box-form {
+  background: linear-gradient(146deg, #181e2c 14%, #ff8000 100%);
+  border-radius: 12px;
+  float: right;
+  font-weight: bold;
+  height: 750px;
+  margin: 114px 150px 0px 0px;
+  width: 400px; }
+
+form {
+  padding: 20px 40px; }
+
+.boxs input {
+  padding: 5px 0;
+  width: 300px; }
+
+.boxs {
+  padding: 12px 0; }
+
+.btn-submit {
+  background-color: #FF9900;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding: 10px 0;
+  width: 304px; }
+
+.title-artist-sesion {
+  margin-left: 100PX;
+  margin-top: 100px; }
+
+/*.item-ul{
+  list-style: none;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.item-artist{
+  float: left;
+  margin: 0 55px 60px 55px;
+}
+.picture-artist{
+  border-radius: 200px;
+  height: 170px;
+  width: 170px;
+}
+.name-artist{
+  font-size: $p;
+  font-weight: bold;
+  text-align: center;
+}*/
