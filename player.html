@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="wrapper-player">
+      <!-------------------------Artist---------------------------->
+      <div class="box-artist clearfix">
+        <div class="menu clearfix">
+          <ul>
+            <li><a href="#"><img src="./img/home.png" alt="Home"></a></li>
+            <li><a href="#"><img src="./img/profile.png" alt="Profile"></a></li>
+            <li><a href="#"><img src="./img/player.png" alt="Player"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close">X</span>
+              <h2 class="title-modal">Add to a list</h2>
+
+              <form class="form-modal" action="">
+                  <label class="modal-label" for="new-list">New list</label>
+                  <input class="modal-input" type="text" name="new-list" required ="required">
+
+                  <label class="label-category" for="">Existing list</label>
+                  <select class="select-category" name="" id="">
+                  <option value="shopping">Select a list</option>
+                  </select>
+
+              <button class="modal-a">Save Playlist</button>
+              </form>
+          </div>
+      </div>
+
+      <canvas id="canvas" width="1500" height="550"></canvas>
+
+      <div class="box-iconsPlayer iconsPlayer">
+        <button id="myBtn" class="addList"><img src="./img/addList.png" alt="addList"></button>
+        <button id="previous"><img src="./img/previous.png" alt="Previous"></button>
+        <button id="play"><img src="./img/play.png" alt="Play"></button>
+        <button id="next"><img src="./img/next.png" alt="Next"></button>
+        <button id="favorite"><img src="./img/favorite.png" alt="Favorite"></button>
+      </div>
+
+    <script type="module" src="./js/player.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
+

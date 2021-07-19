@@ -1,0 +1,67 @@
+.modal {
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background: $degradedThree;
+  border-radius: 8px;
+  height: 300px;
+  margin-left: 700px;
+  margin-top: 250px;
+  padding: 10px 20px;
+  position: relative;
+  width:480px;
+}
+
+.close {
+  color: $colorWhite;
+  float: right;
+  font-weight: bold;
+  padding: 10px 10px 0 0;
+  text-decoration: none;
+}
+
+.close:hover{
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title-modal {
+  color: $colorWhite;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: 40px;
+}
+.select-category{
+  border-radius: 4px;
+  margin-bottom: 50px;
+  padding: 5px 150px;
+}
+.modal-label label{
+  font-weight: bold;
+}
+.modal-input{
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  padding: 5px 110px;
+}
+.modal-content button{
+  background: $backgroundBlue-Black;
+  border-radius: 4px;
+  border: none;
+  color: $colorWhite;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 149px;
+  text-decoration: none;
+}

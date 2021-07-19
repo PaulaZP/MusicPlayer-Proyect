@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="wrapper-sesion">
+      <!-------------------------Artist---------------------------->
+      <div class="box-artist clearfix">
+        <div class="menu">
+          <ul>
+            <li><a href="#"><img src="./img/home.png" alt="Home"></a></li>
+          </ul>
+        </div>
+
+        <h2 class="title-artist-sesion">Artists</h2>
+
+        <ul id="character-list" class="item-ul clearfix"></ul>
+      </div>
+
+      <!-------------------------sesion---------------------------->
+      <div class="box-form clearfix">
+        <form action="#" method="get">
+          <div class="box-form-sing">
+            <h3>Sing in</h3>
+
+            <div class="boxs">
+                <label for="e-mail">Email</label>
+                <input type="email" name="e-mail" class="account" required ="required">
+            </div>
+
+            <div class="boxs">
+                <label for="password">Password</label>
+                <input type="text" name="password" class="account" required ="required">
+            </div>
+
+            <button class = "btn-submit" type="submit" value="submit">Log-in</button>
+          </div>
+        </form>
+
+        <form action="#" method="get">
+          <div>
+            <h3>Create Account</h3>
+
+            <div class="boxs">
+              <label for="nombre">Name</label>
+              <input type="text" name="nombre" class="account" required ="required"/>
+            </div>
+
+            <div class="boxs">
+                <label for="e-mail">Email</label>
+                <input type="email" name="e-mail" class="account" required ="required">
+            </div>
+
+            <div class="boxs">
+              <label for="password">Password</label>
+              <input type="text" name="password" class="account" required ="required">
+            </div>
+
+            <div class="boxs">
+              <label for="password">Confirm password</label>
+              <input type="text" name="password" class="account" required ="required">
+            </div>
+
+            <button class = "btn-submit" type="submit" value="submit">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./js/sesion.js"></script>
+  </body>
+</html>
+
