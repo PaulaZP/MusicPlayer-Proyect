@@ -1,0 +1,111 @@
+#fondo {
+  height:100vh;
+  width:100vw;
+}
+
+#container {
+  background:linear-gradient(146deg, rgba(24,30,44,0.90) 14%, rgba(255,128,0,0.50) 100%);
+  border-radius: 12px;
+  color: white;
+  float: right;
+  margin: 114px 150px 0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  height: 670px;
+  padding: 10px 30px;
+  width: 350px;
+}
+
+#container h3{
+  text-align:left;
+
+}
+.input-box {
+  display:grid;
+  grid-row-gap:10px;
+  margin:15px 0;
+}
+
+.input-box input {
+  height:24px;
+}
+
+.input-box input:focus {
+  background:#ffe4d2;
+  outline:none;
+}
+.input-box i {
+  position:absolute;
+  right:20px;
+  top:36px;
+  visibility:hidden;
+}
+
+.input-box small {
+  position:absolute;
+  right:20px;
+  top:68px;
+  visibility:hidden;
+}
+
+.input-box.exito input {
+  border-color:#ACF33A;
+}
+
+.input-box.error input {
+  border-color:#e74c3c;
+}
+
+.input-box.exito i.iconicstroke-x {
+  color:#ACF33A;
+  visibility:visible;
+}
+.input-box.exito input {
+  background:#cffc88;
+}
+.input-box.error i.iconicstroke-check {
+  color:#e74c3c;
+  visibility:visible;
+}
+.input-box.error input {
+  background:#df7176;
+}
+
+.input-box.error small {
+  color:#e74c3c;
+  visibility:visible;
+}
+
+#button-create {
+  background-color: #FF9900;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height:40px;
+  justify-self:center;
+  letter-spacing: 0.5px;
+  width:350px;
+}
+
+#button-create:hover {
+  background-color:#be7200;
+  transform:scale(1.04);
+}
+
+#button-sing {
+  background-color: #FF9900;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height:40px;
+  justify-self:center;
+  letter-spacing: 0.5px;
+  width:350px;
+}
+
+#button-sing:hover {
+  background-color:#be7200;
+  transform:scale(1.04);
+}
+

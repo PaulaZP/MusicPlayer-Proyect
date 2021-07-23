@@ -1,5 +1,5 @@
 .modal {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.5);
   display: none;
   height: 100%;
   left: 0;
@@ -9,6 +9,7 @@
   width: 100%;
   z-index: 1;
 }
+
 
 .modal-content {
   background: $degradedThree;
@@ -38,22 +39,33 @@
 .title-modal {
   color: $colorWhite;
   font-weight: bold;
-  margin-bottom: 0px;
   margin-left: 40px;
 }
+
 .select-category{
   border-radius: 4px;
-  margin-bottom: 50px;
-  padding: 5px 150px;
+  height: 30px;
+  margin-bottom: 40px;
+  margin-left: 45px;
+  width: 390px;
 }
+
 .modal-label label{
   font-weight: bold;
+}
+.label-category{
+  margin-left: 45px;
+}
+.modal-label{
+  margin-left: 45px;
 }
 .modal-input{
   border-radius: 4px;
   border: none;
+  height: 25px;
   margin-bottom: 20px;
-  padding: 5px 110px;
+  margin-left: 45px;
+  width: 385px;
 }
 .modal-content button{
   background: $backgroundBlue-Black;
@@ -62,6 +74,7 @@
   color: $colorWhite;
   font-size: 16px;
   font-weight: bold;
+  margin-left: 45px;
   padding: 10px 149px;
   text-decoration: none;
 }

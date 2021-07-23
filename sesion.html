@@ -21,54 +21,59 @@
 
       <!-------------------------sesion---------------------------->
       <div class="box-form clearfix">
-        <form action="#" method="get">
-          <div class="box-form-sing">
-            <h3>Sing in</h3>
+        <div id="fondo">
+          <div id="container">
+              <h3>Sing in</h3>
+              <form id="form-sing">
+                  <div class="input-box">
+                      <label for="username">Name</label>
+                      <input type="text"value="" name="username" required ="required">
+                  </div>
 
-            <div class="boxs">
-                <label for="e-mail">Email</label>
-                <input type="email" name="e-mail" class="account" required ="required">
-            </div>
+                  <div class="input-box">
+                      <label for="email">Email</label>
+                      <input type="email" value="" name="email" required ="required">
+                  </div>
 
-            <div class="boxs">
-                <label for="password">Password</label>
-                <input type="text" name="password" class="account" required ="required">
-            </div>
+                  <button id="button-sing" type="submit" value="submit">Sing-in</button>
+              </form>
 
-            <button class = "btn-submit" type="submit" value="submit">Log-in</button>
+              <h3>Create Account</h3>
+              <form id="form-create">
+                  <div class="input-box">
+                      <label for="username">Name</label>
+                      <input type="text"value="" name="username" required ="required">
+                  </div>
+
+                  <div class="input-box">
+                      <label for="email">Email</label>
+                      <input type="email" value="" name="email" required ="required">
+                  </div>
+
+                  <div class="input-box">
+                      <label for="password">Password</label>
+                      <input type="password" value="" name="password" required ="required">
+                      <i class="iconicstroke-x"></i>
+                      <i class="iconicstroke-check"></i>
+                      <small>Error message</small>
+                  </div>
+
+                  <div class="input-box">
+                      <label for="password check">Password Check</label>
+                      <input type="password" value="" name="password check" required ="required">
+                      <i class="iconicstroke-x"></i>
+                      <i class="iconicstroke-check"></i>
+                      <small>Error message</small>
+                  </div>
+
+                  <button id="button-create" type="submit" value="submit">Create Account</button>
+              </form>
           </div>
-        </form>
-
-        <form action="#" method="get">
-          <div>
-            <h3>Create Account</h3>
-
-            <div class="boxs">
-              <label for="nombre">Name</label>
-              <input type="text" name="nombre" class="account" required ="required"/>
-            </div>
-
-            <div class="boxs">
-                <label for="e-mail">Email</label>
-                <input type="email" name="e-mail" class="account" required ="required">
-            </div>
-
-            <div class="boxs">
-              <label for="password">Password</label>
-              <input type="text" name="password" class="account" required ="required">
-            </div>
-
-            <div class="boxs">
-              <label for="password">Confirm password</label>
-              <input type="text" name="password" class="account" required ="required">
-            </div>
-
-            <button class = "btn-submit" type="submit" value="submit">Create Account</button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
-    <script type="module" src="./js/sesion-1.js"></script>
+    <script type="module" src="./js/artist.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
 
