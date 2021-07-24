@@ -2,16 +2,18 @@ let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+btn.addEventListener('click', () => {
   modal.style.display = "block";
-}
+})
 
-span.onclick = function() {
+
+span.addEventListener('click', () => {
   modal.style.display = "none";
-}
+})
 
-window.onclick = function(event) {
+window.addEventListener('click', (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+})
+
