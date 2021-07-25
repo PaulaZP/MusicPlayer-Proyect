@@ -231,20 +231,20 @@ body {
 
 .box-artist {
   float: left;
-  width: 1300px; }
+  width: 1000px; }
 
 .title-artist-sesion {
-  margin-left: 166PX;
+  margin-left: 100PX;
   margin-top: 100px; }
 
 .item-ul-sesion {
   list-style: none;
-  margin-left: 66px;
+  margin-left: 50px;
   margin-top: 50px; }
 
 .item-artist-sesion {
   float: left;
-  margin: 0 55px 60px 55px; }
+  margin: 0 10px 60px 55px; }
 
 .picture-artist-sesion {
   border-radius: 200px;
@@ -265,7 +265,7 @@ body {
   border-radius: 12px;
   color: white;
   float: right;
-  margin: 114px 200px 0px 0px;
+  margin: 114px 230px 0px 0px;
   font-family: 'Montserrat', sans-serif;
   height: 670px;
   padding: 10px 30px;
