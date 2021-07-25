@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="wrapper-home">
+      <div class="box-artist clearfix">
+        <div class="menu clearfix">
+          <ul>
+            <li><a href="#"><img src="./img/home.png" alt="Home"></a></li>
+            <li><a href="#"><img src="./img/profile.png" alt="Profile"></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-------------------------Artist---------------------------->
+      <div class="box-artist clearfix">
+        <h2 class="title-artist-sesion">Artists</h2>
+
+        <ul id="character-list-sesion" class="item-ul-sesion clearfix"></ul>
+      </div>
+
+      <!-------------------------welcome user---------------------------->
+      <div class="window">
+        <h3>Welcome, User!</h3>
+        <p>This is the last song you listened</p>
+        <!-- Here would be the last song listened -->
+        <a href="#"><img src="img/play.png" alt="play button"></a>
+      </div>
+    </div>
+    <script type="module" src="./js/artist.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
+

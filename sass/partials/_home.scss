@@ -1,0 +1,61 @@
+.wrapper-home{
+  background-image: url(../img/background-2.png);
+  background-size: cover;
+  color: $colorWhite;
+  font-family: 'Montserrat', sans-serif;
+  height: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+.window{
+  color: #fff;
+  float: right;
+  text-align: center;
+  margin-right: 100px;
+  margin-top: 150px;
+  background: linear-gradient(180deg, rgba(32,191,85,1) 14%, rgba(1,186,239,0.72) 100%);
+  width: 350px;
+  height: 400px;
+  border-radius: 4px;
+}
+
+.title-artist-sesion{
+  margin-top: 100px;
+  margin-left: 100px;
+  color: #fff;
+}
+
+.item-ul{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.item-artist{
+  float: left;
+  margin: 0 10px 60px 55px;
+  list-style: none;
+}
+
+.picture-artist{
+  width: 170px;
+  height: 170px;
+  border-radius: 200px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.name-artist{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.pages-links{
+  margin-top: 122px;
+  margin-left: 130px;
+}
+
+.pages-links a + a{
+  margin-left: 100px;
+}
