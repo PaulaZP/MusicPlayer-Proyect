@@ -234,12 +234,12 @@ body {
   width: 1300px; }
 
 .title-artist-sesion {
-  margin-left: 100PX;
+  margin-left: 166PX;
   margin-top: 100px; }
 
 .item-ul-sesion {
   list-style: none;
-  margin-left: 50px;
+  margin-left: 66px;
   margin-top: 50px; }
 
 .item-artist-sesion {
@@ -248,8 +248,8 @@ body {
 
 .picture-artist-sesion {
   border-radius: 200px;
-  height: 210px;
-  width: 210px; }
+  height: 200px;
+  width: 200px; }
 
 .name-artist-sesion {
   font-size: 16px;
@@ -265,7 +265,7 @@ body {
   border-radius: 12px;
   color: white;
   float: right;
-  margin: 114px 150px 0px 0px;
+  margin: 114px 200px 0px 0px;
   font-family: 'Montserrat', sans-serif;
   height: 670px;
   padding: 10px 30px;
