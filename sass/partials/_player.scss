@@ -23,15 +23,23 @@ body{
 }
 .addList{
   margin-right: 482px;
-  margin-left: 351px;
+  margin-left: 125px;
   background-color: $backgroundBlue;
   border: none;
+  cursor: pointer;
+  img{
+    width: 30px;
+  }
 }
 #previous{
   margin-left: 0px;
   margin-right: 30px;
   background-color: $backgroundBlue;
   border: none;
+  cursor: pointer;
+  img{
+    width: 24px;
+  }
 }
 
 #play{
@@ -39,6 +47,10 @@ body{
   margin-right: 30px;
   background-color: $backgroundBlue;
   border: none;
+  cursor: pointer;
+  img{
+    width: 24px;
+  }
 }
 
 #next{
@@ -46,8 +58,13 @@ body{
   margin-right: 455px;
   background-color: $backgroundBlue;
   border: none;
+  cursor: pointer;
+  img{
+    width: 24px;
+  }
 }
 #favorite{
   background-color: $backgroundBlue;
   border: none;
+  cursor: pointer;
 }

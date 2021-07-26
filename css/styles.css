@@ -86,7 +86,7 @@ canvas {
   border: 1px solid white;
   width: 1200px;
   height: 550px;
-  margin-left: 350px;
+  margin-left: 130px;
   margin-top: 100px; }
 
 .menu ul {
@@ -125,31 +125,44 @@ body {
 
 .addList {
   margin-right: 482px;
-  margin-left: 351px;
+  margin-left: 125px;
   background-color: #01061D;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  .addList img {
+    width: 30px; }
 
 #previous {
   margin-left: 0px;
   margin-right: 30px;
   background-color: #01061D;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  #previous img {
+    width: 24px; }
 
 #play {
   margin-left: 0px;
   margin-right: 30px;
   background-color: #01061D;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  #play img {
+    width: 24px; }
 
 #next {
   margin-left: 0px;
   margin-right: 455px;
   background-color: #01061D;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  #next img {
+    width: 24px; }
 
 #favorite {
   background-color: #01061D;
-  border: none; }
+  border: none;
+  cursor: pointer; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
@@ -166,7 +179,7 @@ body {
   background: linear-gradient(180deg, rgba(255, 128, 0, 0.72) 0%, rgba(0, 76, 255, 0.29) 100%);
   border-radius: 8px;
   height: 300px;
-  margin-left: 700px;
+  margin-left: 480px;
   margin-top: 250px;
   padding: 10px 20px;
   position: relative;
