@@ -8,12 +8,12 @@ class GeneralPlayer{
       const characterList = document.getElementById('artist_songs');
 
       const item = document.createElement('li');
-      item.setAttribute('class', 'item-artist');
+      item.setAttribute('class', 'item-artist-list');
       characterList.appendChild(item);
 
       const picture = document.createElement('img');
       picture.setAttribute('src', `${this.data[i].image}`);
-      picture.setAttribute('class', 'picture-artist');
+      picture.setAttribute('class', 'picture-album');
       item.appendChild(picture);
 
       const albumName = document.createElement('p');
