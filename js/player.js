@@ -1,7 +1,7 @@
 const musicSong = document.querySelector("#audio");
 let play = document.querySelector('#play');
-let next = document.querySelector('next');
-let prev = document.querySelector('prev');
+let next = document.querySelector('#next');
+let prev = document.querySelector('#previous');
 let canvasCtx = document.querySelector('.canvasAnimate');
 let ctx = canvasCtx.getContext('2d');
 let WIDTH = canvasCtx.width;
@@ -25,6 +25,17 @@ function ListSong(song) {
   play.addEventListener('click', () =>{
     canvasAnimate(musicSong);
     musicSong.play();
+  });
+}
+function nextSong() {
+  next.addEventListener('click', () => {
+    console.log('hola soy next')
+  });
+}
+
+function previousSong() {
+  previous.addEventListener('click', () => {
+    console.log('hola soy previous')
   });
 }
 
@@ -63,3 +74,5 @@ function canvasAnimate(musicSong){
 }
 
 apiArtist();
+nextSong();
+previousSong();
