@@ -12,7 +12,7 @@ function apiArtist(){
     fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
     .then((response) => response.json())
     .then((data) => {
-        const currentSong = data[3].audio;
+        const currentSong = data[5].audio;
         ListSong(currentSong);
     });
 }
@@ -34,7 +34,7 @@ function canvasAnimate(musicSong){
 
     let source = audioCtx.createMediaElementSource(musicSong);
     analyser.connect(audioCtx.destination);
-    analyser.fftSize = 16384;
+    analyser.fftSize = 2048;
     source.connect(analyser);
 
     let bufferLength = analyser.frequencyBinCount;
@@ -49,10 +49,13 @@ function canvasAnimate(musicSong){
 
         let x = 0;
         for(let i = 0; i < bufferLength; i++) {
-            barHeight = dataArray[i] + 150;
-            ctx.fillStyle = 'rgb(' + (barHeight+100) + ',400,10,20)';
+            barHeight = dataArray[i] + 250;
+            const r = 178;
+            const g = 102;
+            const b = 255;
+            ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
             ctx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight);
-            x += barWidth + 0.5;
+            x += barWidth + 0;
         }
         requestAnimationFrame(draw);
     };
