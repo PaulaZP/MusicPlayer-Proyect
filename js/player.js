@@ -7,7 +7,6 @@ let ctx = canvasCtx.getContext('2d');
 let WIDTH = canvasCtx.width;
 let HEIGHT = canvasCtx.height;
 
-
 function apiArtist(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
@@ -27,6 +26,12 @@ function ListSong(song) {
     musicSong.play();
   });
 }
+
+function pauseSong() {
+  const pause = document.createElement('img');
+  pause.setAttribute('src', '../img/pause.png')
+}
+
 function nextSong() {
   next.addEventListener('click', () => {
     console.log('hola soy next')
