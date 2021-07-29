@@ -1,42 +1,36 @@
-const formCreate = document.getElementById('form-create');
+/*validar nombre*/
+function verificarName(){
+    let regName = / ^ [a-zA-Z] + [a-zA-Z] + $ / ;
+    let name = document.querySelector('name').value;
+    name.addEventListener('input', () => {
+        const verifyName = document.querySelector('#verifyName');
 
-const password = document.querySelector("[name='password']");
-const passwordCheck = document.querySelector("[name='password check']");
+        if (! regName.test (name)) {
+            verifyName.innerText = "válido";
+        } else {
+            verifyName.innerText = "incorrecto";
+        }
+    })
+}
 
-formCreate.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    checkInput();
-});
+/*validar el correo*/
+function verificarEmail(){
+    const email = document.querySelector('#email')
+    email.addEventListener('input', (event) => {
+        const field  = event.target;
+        const verify = document.querySelector('#verifyEmail');
+        const caracterEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-function checkInput() {
-    const passwordValue = password.value.trim(); //.trim elimina los espacios en blancoen ambos extremos del string
-    const passwordCheckValue =  passwordCheck.value.trim();
+        if (caracterEmail.test(field.value)) {
+        verify.innerText = "válido";
+        } else if(field.value == ""){
+            verify.innerText = "";
+        }else{
+            verify.innerText = "incorrecto";
+        }
+    });
+}
 
-    if(passwordValue === '') {
-        setErrorFor(password, 'Password cannot be blank');
-    } else {
-        setExitoFor(password);
-    }
-    if(passwordCheckValue === '') {
-        setErrorFor(passwordCheck, 'Password cannot be blank');
-    } else if(passwordCheckValue != passwordValue) {
-        setErrorFor(passwordCheck, 'Password does not match');
-    } else {
-        setExitoFor(passwordCheck);
-    }
-};
-
-function setErrorFor(input, message) {
-    const inputBox = input.parentElement;
-    const small = inputBox.querySelector('small');
-
-    small.innerText = message;
-
-    inputBox.className = 'input-box error';
-};
-
-function setExitoFor(input) {
-    const inputBox = input.parentElement;
-    inputBox.className = 'input-box exito';
-};
+verificarPasswords();
+verificarEmail();
