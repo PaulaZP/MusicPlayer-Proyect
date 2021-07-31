@@ -3,7 +3,7 @@ let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
 
 btn.addEventListener('click', () => {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 })
 
 

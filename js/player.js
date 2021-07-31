@@ -20,7 +20,7 @@ function ListSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
-  prueba();
+
 
 }
 function prueba(){
@@ -38,7 +38,7 @@ function prueba(){
     play.classList.toggle('playing');
   });
 }
-
+prueba();
 function nextSong() {
   next.addEventListener('click', () => {
     console.log('hola soy next')
