@@ -1,5 +1,5 @@
 const musicSong = document.querySelector("#audio");
-let play = document.querySelector('#play');
+let play = document.querySelector('#play img');
 let next = document.querySelector('#next');
 let prev = document.querySelector('#previous');
 let canvasCtx = document.querySelector('.canvasAnimate');
@@ -20,22 +20,22 @@ function ListSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
-  playSong();
-  pauseSong();
+  prueba();
+
 }
-
-function playSong(){
-  play.addEventListener('click', () =>{
-    play.innerHTML = '<img class="pad" src="./img/pause.png" />';
-    play.setAttribute('id', 'btnPause')
-    canvasAnimate(musicSong);
-    musicSong.play();
-  });
-};
-
-function pauseSong() {
-  pause.addEventListener('click', () => {
-    musicSong.pause();
+function prueba(){
+  play.addEventListener('click', (e) =>{
+    if(play.classList.contains('playing')){
+      play.src = './img/play.png';
+      play.setAttribute('id', 'btnPause');
+      canvasAnimate(musicSong);
+      musicSong.pause();
+    }else{
+      play.src = './img/pause.png';
+      canvasAnimate(musicSong);
+      musicSong.play();
+    }
+    play.classList.toggle('playing');
   });
 }
 
