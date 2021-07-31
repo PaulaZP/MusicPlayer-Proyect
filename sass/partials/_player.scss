@@ -35,8 +35,6 @@
 }
 
 .musicControls{
-  border: none;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   width: 300px;
@@ -44,17 +42,21 @@
   #previous{
     background-color: $backgroundBlue;
     border: none;
+    cursor: pointer;
   }
   #play{
     background-color: $backgroundBlue;
     border: none;
+    cursor: pointer;
   }
   #next{
     background-color: $backgroundBlue;
     border: none;
+    cursor: pointer;
   }
   #btnPause{
     background-color: $backgroundBlue;
     border: none;
+    cursor: pointer;
   }
 }

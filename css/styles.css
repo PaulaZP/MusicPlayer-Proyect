@@ -146,23 +146,25 @@
     cursor: pointer; }
 
 .musicControls {
-  border: none;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   width: 300px; }
   .musicControls #previous {
     background-color: #01061D;
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .musicControls #play {
     background-color: #01061D;
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .musicControls #next {
     background-color: #01061D;
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .musicControls #btnPause {
     background-color: #01061D;
-    border: none; }
+    border: none;
+    cursor: pointer; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
