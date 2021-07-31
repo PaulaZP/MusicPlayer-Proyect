@@ -3,21 +3,26 @@
   clear: both;
   display: table; }
 
-.wrapperlist {
+.list-body {
   background: linear-gradient(117deg, #1a1f2a 0%, rgba(255, 128, 0, 0.760942) 46%);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  margin: 0px;
+  padding: 0px; }
+
+.wrapper-list {
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid; }
+  height: 100%;
+  margin: 0 auto;
+  width: 90%; }
+  @media (min-width: 1720px) {
+    .wrapper-list {
+      margin: 0 auto;
+      width: 70%; } }
 
 .songs-title {
   font-size: 24px;
   text-transform: uppercase;
-  margin-top: 66px;
-  margin-left: 130px; }
+  margin-top: 66px; }
 
 .pages-links {
   margin-top: 122px;
@@ -27,8 +32,10 @@
   margin-left: 100px; }
 
 .songs-list {
-  width: 641px;
-  margin-left: 90px; }
+  width: 641px; }
+  .songs-list ul {
+    padding: 0;
+    margin: 0; }
 
 .artist_list li {
   list-style: none;
@@ -55,7 +62,8 @@
   margin-left: 50px; }
 
 .artist-box {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
 .artist_list_info {
   margin-left: 267px;
@@ -72,15 +80,21 @@
 .name-artist-description {
   font-size: 16px; }
 
-.wrapperPerfil {
+.perfil-body {
   background: linear-gradient(90deg, #010b20 0%, #2bbebe 100%);
-  background-size: cover;
-  width: 100%;
-  height: 1024px;
-  margin: 0 auto;
+  margin: 0px;
+  padding: 0px; }
+
+.wrapper-Perfil {
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid; }
+  height: 100%;
+  margin: 0 auto;
+  width: 90%; }
+  @media (min-width: 1720px) {
+    .wrapper-Perfil {
+      margin: 0 auto;
+      width: 70%; } }
 
 .canvasAnimate {
   max-width: 100%;
