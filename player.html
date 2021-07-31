@@ -10,16 +10,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Music Player</title>
   </head>
-  <body>
+  <body class="player-body">
     <div class="wrapper-player">
-      <div class="box-artist clearfix">
-        <div class="menu clearfix">
-          <ul>
-            <li><a href="home.html"><img src="./img/home.png" alt="Home"></a></li>
-            <li><a href="perfil.html"><img src="./img/profile.png" alt="Profile"></a></li>
-            <li><a href="player.html"><img src="./img/player.png" alt="Player"></a></li>
-          </ul>
+      <div class="menu clearfix">
+        <ul>
+          <li><a href="home.html"><img src="./img/home.png" alt="Home"></a></li>
+          <li><a href="perfil.html"><img src="./img/profile.png" alt="Profile"></a></li>
+          <li><a href="player.html"><img src="./img/player.png" alt="Player"></a></li>
+        </ul>
+      </div>
+
+      <canvas class="canvasAnimate" width="1200" height="550"></canvas>
+
+      <div class="box-iconsPlayer iconsPlayer">
+        <audio src="" id="audio"></audio>
+        <button id="myBtn" class="addList"><img src="./img/addList.png" alt="addList"></button>
+        <div class="musicControls">
+          <button id="previous"><img src="./img/previous.png" alt="Previous"></button>
+          <button id="play"><img src="./img/play.png" alt="Play"></button>
+          <button id="next"><img src="./img/next.png" alt="Next"></button>
         </div>
+        <button id="favorite"><img src="./img/favorite.png" alt="Favorite"></button>
       </div>
 
       <div id="myModal" class="modal">
@@ -40,16 +51,7 @@
           </form>
         </div>
       </div>
-
-      <div class="box-iconsPlayer iconsPlayer">
-        <canvas class="canvasAnimate" width="1200" height="550"></canvas>
-        <audio src="" id="audio"></audio>
-        <button id="myBtn" class="addList"><img src="./img/addList.png" alt="addList"></button>
-        <button id="previous"><img src="./img/previous.png" alt="Previous"></button>
-        <button id="play"><img src="./img/play.png" alt="Play"></button>
-        <button id="next"><img src="./img/next.png" alt="Next"></button>
-        <button id="favorite"><img src="./img/favorite.png" alt="Favorite"></button>
-      </div>
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/player.js"></script>

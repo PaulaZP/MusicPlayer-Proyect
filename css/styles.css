@@ -82,17 +82,16 @@
   font-family: 'Montserrat', sans-serif;
   border: 1px solid; }
 
-canvas {
-  border: 1px solid white;
-  width: 1200px;
-  height: 550px;
-  margin-left: 130px;
-  margin-top: 100px;
-  margin-bottom: 30px; }
+.canvasAnimate {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid white; }
 
 .menu ul {
   list-style: none;
-  padding: 75px 0 0 125px; }
+  padding: 75px 0 0 0; }
 
 .menu li {
   float: left;
@@ -102,65 +101,54 @@ canvas {
   width: 30px;
   height: 30px; }
 
-body {
+.player-body {
+  background-color: #01061D;
   margin: 0px;
   padding: 0px; }
 
 .wrapper-player {
-  background-color: #01061D;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  height: 1024px;
+  height: 100%;
   margin: 0 auto;
-  width: 100%; }
+  width: 90%; }
+  @media (min-width: 1720px) {
+    .wrapper-player {
+      margin: 0 auto;
+      width: 70%; } }
 
-.icons-player {
-  list-style: none;
-  margin-left: 200px; }
-
-.icons-player button {
-  float: left; }
-
-.addList {
-  margin-right: 482px;
-  margin-left: 125px;
-  background-color: #01061D;
+.box-iconsPlayer {
   border: none;
-  cursor: pointer; }
-  .addList img {
-    width: 30px; }
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; }
+  .box-iconsPlayer .addList {
+    background-color: #01061D;
+    border: none;
+    cursor: pointer; }
+  .box-iconsPlayer #favorite {
+    background-color: #01061D;
+    border: none;
+    cursor: pointer; }
 
-#previous {
-  margin-left: 0px;
-  margin-right: 30px;
-  background-color: #01061D;
+.musicControls {
   border: none;
-  cursor: pointer; }
-  #previous img {
-    width: 24px; }
-
-#play {
-  margin-left: 0px;
-  margin-right: 30px;
-  background-color: #01061D;
-  border: none;
-  cursor: pointer; }
-  #play img {
-    width: 24px; }
-
-#next {
-  margin-left: 0px;
-  margin-right: 455px;
-  background-color: #01061D;
-  border: none;
-  cursor: pointer; }
-  #next img {
-    width: 24px; }
-
-#favorite {
-  background-color: #01061D;
-  border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 300px; }
+  .musicControls #previous {
+    background-color: #01061D;
+    border: none; }
+  .musicControls #play {
+    background-color: #01061D;
+    border: none; }
+  .musicControls #next {
+    background-color: #01061D;
+    border: none; }
+  .musicControls #btnPause {
+    background-color: #01061D;
+    border: none; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
@@ -235,52 +223,51 @@ body {
   padding: 10px 149px;
   text-decoration: none; }
 
-.wrapper-sesion {
+.sesion-body {
   background-image: url(../img/background-1.png);
-  background-size: cover;
+  background-size: cover; }
+
+.wrapper-sesion {
+  display: flex;
+  justify-content: space-between;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  height: 1024px;
+  height: 100%;
   margin: 0 auto;
-  width: 100%; }
+  width: 90%; }
+  @media (min-width: 1720px) {
+    .wrapper-sesion {
+      margin: 0 auto;
+      width: 70%; } }
 
 .box-artist {
-  float: left;
-  width: 1000px; }
-
-.title-artist-sesion {
-  margin-left: 100PX;
-  margin-top: 100px; }
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
 
 .item-ul-sesion {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  margin-left: 50px;
+  padding: 0;
   margin-top: 50px; }
-
-.item-artist-sesion {
-  float: left;
-  margin: 0 10px 60px 55px; }
 
 .picture-artist-sesion {
   border-radius: 200px;
-  height: 200px;
-  width: 200px; }
+  height: 150px;
+  width: 150px; }
 
 .name-artist-sesion {
   font-size: 16px;
   font-weight: bold;
   text-align: center; }
 
-#fondo {
-  height: 100vh;
-  width: 100vw; }
-
 #container {
   background: linear-gradient(146deg, rgba(24, 30, 44, 0.9) 14%, rgba(255, 128, 0, 0.5) 100%);
   border-radius: 12px;
   color: white;
   float: right;
-  margin: 114px 230px 0px 0px;
+  margin: 114px 0 0px 0px;
   font-family: 'Montserrat', sans-serif;
   height: 670px;
   padding: 30px 30px;
@@ -332,30 +319,41 @@ body {
   color: red;
   font-weight: bold; }
 
-.wrapper-home {
+.home-body {
   background-image: url(../img/background-2.png);
-  background-size: cover;
+  background-size: cover; }
+
+.wrapper-home {
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
   font-family: 'Montserrat', sans-serif;
-  height: 1024px;
+  height: 100%;
   margin: 0 auto;
-  width: 100%; }
+  width: 90%; }
+  @media (min-width: 1720px) {
+    .wrapper-home {
+      margin: 0 auto;
+      width: 70%; } }
+
+.box-home {
+  display: flex;
+  justify-content: space-between; }
 
 .window {
-  color: #fff;
-  float: right;
-  text-align: center;
-  margin-right: 100px;
-  margin-top: 150px;
   background: linear-gradient(180deg, #20bf55 14%, rgba(1, 186, 239, 0.72) 100%);
-  width: 350px;
+  border-radius: 4px;
+  color: #fff;
   height: 400px;
-  border-radius: 4px; }
+  margin-top: 150px;
+  text-align: center;
+  width: 350px; }
+
+.title-window {
+  padding-top: 120px; }
 
 .title-artist-sesion {
-  margin-top: 100px;
-  margin-left: 100px;
-  color: #fff; }
+  margin-top: 100px; }
 
 .item-ul {
   margin-left: 50px;
@@ -363,25 +361,25 @@ body {
 
 .item-artist {
   float: left;
-  margin: 0 10px 60px 55px;
-  list-style: none; }
+  list-style: none;
+  margin: 0 10px 60px 55px; }
 
 .picture-artist {
-  width: 170px;
-  height: 170px;
   border-radius: 200px;
+  height: 170px;
+  margin-left: 10px;
   margin-top: 25px;
-  margin-left: 10px; }
+  width: 170px; }
 
 .name-artist {
-  text-align: center;
-  font-weight: bold;
+  color: #fff;
   font-size: 16px;
-  color: #fff; }
+  font-weight: bold;
+  text-align: center; }
 
 .pages-links {
-  margin-top: 122px;
-  margin-left: 130px; }
+  margin-left: 130px;
+  margin-top: 122px; }
 
 .pages-links a + a {
   margin-left: 100px; }

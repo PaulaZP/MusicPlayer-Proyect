@@ -10,29 +10,32 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Music Player</title>
   </head>
-  <body>
+  <body class="home-body">
     <div class="wrapper-home">
-      <div class="box-artist clearfix">
-        <div class="menu clearfix">
-          <ul>
-            <li><a href="home.html"><img src="./img/home.png" alt="Home"></a></li>
-            <li><a href="perfil.html"><img src="./img/profile.png" alt="Profile"></a></li>
-          </ul>
+      <div class="menu clearfix">
+        <ul>
+          <li><a href="home.html"><img src="./img/home.png" alt="Home"></a></li>
+          <li><a href="perfil.html"><img src="./img/profile.png" alt="Profile"></a></li>
+        </ul>
+      </div>
+
+      <div class="box-home">
+        <!-------------------------Artist---------------------------->
+        <div class="box-artist clearfix">
+          <h2 class="title-artist-sesion">Artists</h2>
+
+          <ul id="character-list-sesion" class="item-ul-sesion clearfix"></ul>
         </div>
-      </div>
-      <!-------------------------Artist---------------------------->
-      <div class="box-artist clearfix">
-        <h2 class="title-artist-sesion">Artists</h2>
 
-        <ul id="character-list-sesion" class="item-ul-sesion clearfix"></ul>
-      </div>
-
-      <!-------------------------welcome user---------------------------->
-      <div class="window">
-        <h3>Welcome, User!</h3>
-        <p>This is the last song you listened</p>
-        <!-- Here would be the last song listened -->
-        <a href="#"><img src="img/play.png" alt="play button"></a>
+        <!-------------------------welcome user---------------------------->
+        <div class="box-welcome">
+          <div class="window">
+            <h3 class="title-window">Welcome, User!</h3>
+            <p>This is the last song you listened</p>
+            <!-- Here would be the last song listened -->
+            <a href="#"><img src="img/play.png" alt="play button"></a>
+          </div>
+        </div>
       </div>
     </div>
     <script type="module" src="./js/artist.js"></script>

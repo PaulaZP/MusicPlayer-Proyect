@@ -20,16 +20,23 @@ function ListSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
+  playSong();
+  pauseSong();
+}
 
+function playSong(){
   play.addEventListener('click', () =>{
+    play.innerHTML = '<img class="pad" src="./img/pause.png" />';
+    play.setAttribute('id', 'btnPause')
     canvasAnimate(musicSong);
     musicSong.play();
   });
-}
+};
 
 function pauseSong() {
-  const pause = document.createElement('img');
-  pause.setAttribute('src', '../img/pause.png')
+  pause.addEventListener('click', () => {
+    musicSong.pause();
+  });
 }
 
 function nextSong() {

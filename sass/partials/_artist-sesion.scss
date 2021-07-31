@@ -1,33 +1,38 @@
-.wrapper-sesion{
+.sesion-body{
   background-image: url(../img/background-1.png);
   background-size: cover;
+}
+.wrapper-sesion{
+  display: flex;
+  justify-content: space-between;
   color: $colorWhite;
   font-family: 'Montserrat', sans-serif;
-  height: 1024px;
+  height: 100%;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
+  @media(min-width: 1720px){
+    margin: 0 auto;
+    width: 70%;
+  }
 }
+
 .box-artist{
-  float: left;
-  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
-.title-artist-sesion{
-  margin-left: 100PX;
-  margin-top: 100px;
-}
+
 .item-ul-sesion{
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  margin-left: 50px;
+  padding: 0;
   margin-top: 50px;
-}
-.item-artist-sesion{
-  float: left;
-  margin: 0 10px 60px 55px;
 }
 .picture-artist-sesion{
   border-radius: 200px;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 .name-artist-sesion{
   font-size: $p;
