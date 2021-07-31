@@ -11,7 +11,7 @@ function apiArtist(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
   .then((data) => {
-    const currentSong = data[5].audio;
+    const currentSong = data[3].audio;
     ListSong(currentSong);
   });
 }
@@ -20,15 +20,13 @@ function ListSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
-
-
+  prueba();
 }
 function prueba(){
-  play.addEventListener('click', (e) =>{
+  play.addEventListener('click', () =>{
     if(play.classList.contains('playing')){
       play.src = './img/play.png';
       play.setAttribute('id', 'btnPause');
-      canvasAnimate(musicSong);
       musicSong.pause();
     }else{
       play.src = './img/pause.png';
@@ -38,7 +36,7 @@ function prueba(){
     play.classList.toggle('playing');
   });
 }
-prueba();
+
 function nextSong() {
   next.addEventListener('click', () => {
     console.log('hola soy next')
