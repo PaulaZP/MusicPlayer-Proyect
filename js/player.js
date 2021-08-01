@@ -11,7 +11,7 @@ function apiGorillaz(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
   .then((data) => {
-    const currentSong = data[3].audio;
+    const currentSong = data[2].audio;
     listSong(currentSong);
   });
 }
@@ -65,8 +65,8 @@ function listSong(song) {
 function canvasAnimate(musicSong){
   let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   let analyser = audioCtx.createAnalyser();
-
   let source = audioCtx.createMediaElementSource(musicSong);
+
   analyser.connect(audioCtx.destination);
   analyser.fftSize = 2048;
   source.connect(analyser);
@@ -80,8 +80,8 @@ function canvasAnimate(musicSong){
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
     let barWidth = (WIDTH / bufferLength) * 2.5;
     let barHeight;
-
     let x = 0;
+
     for(let i = 0; i < bufferLength; i++) {
       barHeight = dataArray[i] + 250;
       const r = 178;
