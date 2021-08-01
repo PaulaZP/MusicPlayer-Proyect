@@ -20,9 +20,10 @@ function ListSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
-  prueba();
+  playSong();
 }
-function prueba(){
+
+function playSong(){
   play.addEventListener('click', () =>{
     if(play.classList.contains('playing')){
       play.src = './img/play.png';
