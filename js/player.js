@@ -6,6 +6,7 @@ let canvasCtx = document.querySelector('.canvasAnimate');
 let ctx = canvasCtx.getContext('2d');
 let WIDTH = canvasCtx.width;
 let HEIGHT = canvasCtx.height;
+let counter = 0;
 
 function apiGorillaz(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
@@ -46,11 +47,21 @@ class MusicPlayer{
   }
   nextSong(){
     this.next.addEventListener('click', () => {
+      if(counter < listSong.length -1){
+        counter += 1;
+      }else{
+        counter = 0;
+      }
       console.log('hola soy next')
     });
   }
   previousSong(){
     this.previous.addEventListener('click', () => {
+      if(counter > 0){
+        counter -= 1;
+      }else{
+        counter = listSong.length -1;
+      }
       console.log('hola soy previous')
     });
   }
