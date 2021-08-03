@@ -12,7 +12,7 @@ function apiGorillaz(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
   .then((data) => {
-    const currentSong = data[2].audio;
+    const currentSong = data[counter].audio;
     listSong(currentSong);
   });
 }
@@ -47,7 +47,7 @@ class MusicPlayer{
   }
   nextSong(){
     this.next.addEventListener('click', () => {
-      if(counter < listSong.length -1){
+      if(counter < listSong()){
         counter += 1;
       }else{
         counter = 0;
@@ -60,7 +60,7 @@ class MusicPlayer{
       if(counter > 0){
         counter -= 1;
       }else{
-        counter = listSong.length -1;
+        counter = listSong();
       }
       console.log('hola soy previous')
     });
