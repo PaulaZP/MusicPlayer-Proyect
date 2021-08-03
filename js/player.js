@@ -1,60 +1,83 @@
 const musicSong = document.querySelector("#audio");
 let play = document.querySelector('#play img');
 let next = document.querySelector('#next');
-let prev = document.querySelector('#previous');
+let previous = document.querySelector('#previous');
 let canvasCtx = document.querySelector('.canvasAnimate');
 let ctx = canvasCtx.getContext('2d');
 let WIDTH = canvasCtx.width;
 let HEIGHT = canvasCtx.height;
+let counter = 0;
 
-function apiArtist(){
+function apiGorillaz(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
   .then((data) => {
-    const currentSong = data[3].audio;
-    ListSong(currentSong);
+    const currentSong = data[counter].audio;
+    listSong(currentSong);
   });
 }
 
-function ListSong(song) {
+function handleControls(){
+  const create = new MusicPlayer(musicSong, play, next, previous);
+  create.songStatus();
+  create.nextSong();
+  create.previousSong();
+}
+
+class MusicPlayer{
+  constructor(musicSong, play, next, previous){
+    this.musicSong = musicSong;
+    this.play = play;
+    this.next = next;
+    this.previous = previous;
+  }
+  songStatus(){
+    this.play.addEventListener('click', () =>{
+      if(this.play.classList.contains('playing')){
+        this.play.src = './img/play.png';
+        this.play.setAttribute('id', 'btnPause');
+        this.musicSong.pause();
+      }else{
+        this.play.src = './img/pause.png';
+        canvasAnimate(this.musicSong);
+        this.musicSong.play();
+      }
+      this.play.classList.toggle('playing');
+    });
+  }
+  nextSong(){
+    this.next.addEventListener('click', () => {
+      if(counter < listSong()){
+        counter += 1;
+      }else{
+        counter = 0;
+      }
+      console.log('hola soy next')
+    });
+  }
+  previousSong(){
+    this.previous.addEventListener('click', () => {
+      if(counter > 0){
+        counter -= 1;
+      }else{
+        counter = listSong();
+      }
+      console.log('hola soy previous')
+    });
+  }
+}
+
+function listSong(song) {
   musicSong.setAttribute('crossorigin', 'anonymous');
   musicSong.load();
   musicSong.src = song;
-  playSong();
-}
-
-function playSong(){
-  play.addEventListener('click', () =>{
-    if(play.classList.contains('playing')){
-      play.src = './img/play.png';
-      play.setAttribute('id', 'btnPause');
-      musicSong.pause();
-    }else{
-      play.src = './img/pause.png';
-      canvasAnimate(musicSong);
-      musicSong.play();
-    }
-    play.classList.toggle('playing');
-  });
-}
-
-function nextSong() {
-  next.addEventListener('click', () => {
-    console.log('hola soy next')
-  });
-}
-
-function previousSong() {
-  previous.addEventListener('click', () => {
-    console.log('hola soy previous')
-  });
 }
 
 function canvasAnimate(musicSong){
   let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   let analyser = audioCtx.createAnalyser();
-
   let source = audioCtx.createMediaElementSource(musicSong);
+
   analyser.connect(audioCtx.destination);
   analyser.fftSize = 2048;
   source.connect(analyser);
@@ -68,8 +91,8 @@ function canvasAnimate(musicSong){
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
     let barWidth = (WIDTH / bufferLength) * 2.5;
     let barHeight;
-
     let x = 0;
+
     for(let i = 0; i < bufferLength; i++) {
       barHeight = dataArray[i] + 250;
       const r = 178;
@@ -84,6 +107,5 @@ function canvasAnimate(musicSong){
   draw();
 }
 
-apiArtist();
-nextSong();
-previousSong();
+apiGorillaz();
+handleControls();
