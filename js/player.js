@@ -12,8 +12,20 @@ function apiGorillaz(){
   fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
   .then((response) => response.json())
   .then((data) => {
-    const currentSong = data[counter].audio;
+    const currentSong = data[4].audio;
     listSong(currentSong);
+
+    const listInfo = document.getElementById('list-info-song');
+
+    const albumName = document.createElement('p');
+    albumName.setAttribute('class', 'name-album');
+    listInfo.appendChild(albumName);
+    albumName.innerHTML = `Name album: ${data[4].album}`;
+
+    const songName = document.createElement('p');
+    songName.setAttribute('class', 'name-song');
+    listInfo.appendChild(songName);
+    songName.innerHTML = `Name song: ${data[4].name}`;
   });
 }
 

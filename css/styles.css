@@ -99,7 +99,7 @@
 .canvasAnimate {
   max-width: 100%;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 30px;
   margin-bottom: 50px;
   border: 1px solid white; }
 
@@ -117,12 +117,12 @@
 
 .player-body {
   background-color: #01061D;
+  font-family: 'Montserrat', sans-serif;
   margin: 0px;
   padding: 0px; }
 
 .wrapper-player {
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
   height: 100%;
   margin: 0 auto;
   width: 90%; }
@@ -130,6 +130,14 @@
     .wrapper-player {
       margin: 0 auto;
       width: 70%; } }
+
+#list-info-song {
+  margin-top: 100px; }
+  #list-info-song p {
+    font-weight: bold; }
+  #list-info-song .name-album {
+    margin-left: 0;
+    width: 500px; }
 
 .box-iconsPlayer {
   border: none;

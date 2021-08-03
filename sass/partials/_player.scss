@@ -1,17 +1,28 @@
 .player-body{
   background-color: $backgroundBlue;
+  font-family: 'Montserrat', sans-serif;
   margin: 0px;
   padding: 0px;
 }
 .wrapper-player{
   color: $colorWhite;
-  font-family: 'Montserrat', sans-serif;
   height: 100%;
   margin: 0 auto;
   width: 90%;
   @media(min-width: 1720px){
     margin: 0 auto;
     width: 70%;
+  }
+}
+
+#list-info-song{
+  margin-top: 100px;
+  p{
+    font-weight: bold;
+  }
+  .name-album{
+    margin-left: 0;
+    width: 500px;
   }
 }
 
