@@ -1,4 +1,7 @@
-class GeneralPlayer{
+import {apiSong, apiArtistInfo} from './apiArtist.js';
+apiSong();
+apiArtistInfo();
+class songs{
   constructor(data){
     this.data = data;
   }
@@ -61,18 +64,6 @@ class GeneralPlayer{
   }
 }
 
-fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/radiohead')
-.then((response) => response.json())
-.then((data) => {
-  const prueba2 = new GeneralPlayer(data);
-  prueba2.artist();
-});
-
-fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/artists')
-.then((response) => response.json())
-.then((data) => {
-  const prueba1 = new GeneralPlayer(data);
-  prueba1.artistinfo();
-});
+export {songs};
 
 
