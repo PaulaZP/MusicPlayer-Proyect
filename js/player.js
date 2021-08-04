@@ -13,7 +13,7 @@ function apiArtist(){
   .then((response) => response.json())
   .then((data) => {
     const currentSong = data[counter].audio;
-    ListSong(currentSong);
+    listSong(data, currentSong);
 
     const listInfo = document.getElementById('list-info-song');
 
@@ -28,15 +28,6 @@ function apiArtist(){
     songName.innerHTML = `Name song: ${data[counter].name}`;
 
   });
-}
-
-function ListSong(song) {
-  musicSong.setAttribute('crossorigin', 'anonymous');
-  musicSong.load();
-  musicSong.src = song;
-  playSong();
-  nextSong();
-  previousSong();
 }
 
 function playSong(){
@@ -54,16 +45,49 @@ function playSong(){
   });
 }
 
-function nextSong() {
+function nextSong(data) {
   next.addEventListener('click', () => {
-    console.log('hola soy next')
+    const actualCount = counter++;
+    if(actualCount < data.length){
+
+      musicSong.src = data[actualCount].audio;
+      musicSong.play();
+    }else{
+      counter = 0;
+      musicSong.src = data[counter].audio;
+      musicSong.play();
+    }
   });
 }
 
-function previousSong() {
+/*    if(counter < data.length){
+      const actualCount = counter++;
+      musicSong.src = data[actualCount].audio;
+      musicSong.play();
+    }else{
+      counter = 0;
+      musicSong.src = data[counter].audio;
+      musicSong.play();
+    }*/
+
+function previousSong(song) {
   previous.addEventListener('click', () => {
+    if(counter > 0){
+      counter -= 1;
+    }else{
+      counter = listSong(song);
+    }
     console.log('hola soy previous')
   });
+}
+
+function listSong(data, song) {
+  musicSong.setAttribute('crossorigin', 'anonymous');
+  musicSong.load();
+  musicSong.src = song;
+  playSong();
+  nextSong(data, song);
+  previousSong();
 }
 
 function canvasAnimate(musicSong){
@@ -101,8 +125,6 @@ function canvasAnimate(musicSong){
 }
 
 apiArtist();
-
-
 
 /*const musicSong = document.querySelector("#audio");
 let play = document.querySelector('#play img');
