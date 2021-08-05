@@ -6,7 +6,6 @@ btn.addEventListener('click', () => {
   modal.style.display = "flex";
 })
 
-
 span.addEventListener('click', () => {
   modal.style.display = "none";
 })

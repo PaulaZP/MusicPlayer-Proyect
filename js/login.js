@@ -1,4 +1,4 @@
-const formCreate = document.querySelector('#form-create');
+/*const formCreate = document.querySelector('#form-create');
 
 formCreate.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -22,5 +22,5 @@ function createAccount(inputsCreate){
     const data = data.id;
     localStorage.setItem(data);
   });
-}
+}*/
 
