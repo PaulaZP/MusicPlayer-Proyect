@@ -13,10 +13,14 @@ formCreate.addEventListener('submit', (e) => {
   formCreate.elements[3].value = "";
 
   createAccount(inputsCreate)
-})
+});
+
 function createAccount(inputsCreate){
   fetch('https://music-proyect.herokuapp.com/user')
   .then((response) => response.json())
   .then((data) => {
+    const data = data.id;
+    localStorage = data;
   });
 }
+
