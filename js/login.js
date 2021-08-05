@@ -20,7 +20,6 @@ function createAccount(inputsCreate){
 }
 
 formCreate.addEventListener('submit', (e) => {
-  console.log('hola')
   e.preventDefault();
   let inputsCreate = {
     'userName': `${formCreate.elements[0].value}`,
@@ -33,7 +32,6 @@ formCreate.addEventListener('submit', (e) => {
   formCreate.elements[3].value = "";
 
   createAccount(inputsCreate)
-
 });
 
 
