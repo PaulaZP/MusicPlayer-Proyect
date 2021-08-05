@@ -28,6 +28,11 @@
   list-style: none;
   padding: 0;
   margin-top: 50px;
+  a{
+    text-decoration: none;
+    color: white;
+    margin-left: 45px;
+  }
 }
 .picture-artist-sesion{
   border-radius: 200px;
@@ -38,4 +43,8 @@
   font-size: $p;
   font-weight: bold;
   text-align: center;
+  text-transform: lowercase;
+  a{
+    text-transform: lowercase;
+  }
 }

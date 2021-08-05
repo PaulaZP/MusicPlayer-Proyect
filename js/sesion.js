@@ -1,7 +1,5 @@
-import {apiSong, apiArtistInfo} from './apiArtist.js';
-apiSong();
-apiArtistInfo();
-class songs{
+//import {apiSong, apiArtistInfo} from './apiArtist.js';
+class Songs{
   constructor(data){
     this.data = data;
   }
@@ -64,6 +62,6 @@ class songs{
   }
 }
 
-export {songs};
+export default Songs;
 
 

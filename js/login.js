@@ -20,7 +20,7 @@ function createAccount(inputsCreate){
   .then((response) => response.json())
   .then((data) => {
     const data = data.id;
-    localStorage = data;
+    localStorage.setItem(data);
   });
 }
 

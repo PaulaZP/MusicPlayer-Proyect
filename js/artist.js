@@ -1,16 +1,10 @@
-import {apiArtist} from './apiArtist.js';
-
-apiArtist();
-
 class GeneralPlayer{
   constructor(data){
     this.data = data;
   }
   artist(){
+    const characterList = document.querySelector('.character-list-sesion');
     for (let i = 0; i < this.data.length; i++) {
-
-      const characterList = document.getElementById('character-list-sesion');
-
       const item = document.createElement('li');
       item.setAttribute('class', 'item-artist-sesion');
       characterList.appendChild(item);
@@ -20,11 +14,22 @@ class GeneralPlayer{
       picture.setAttribute('class', 'picture-artist-sesion');
       item.appendChild(picture);
 
-      const artistName = document.createElement('p');
-      artistName.setAttribute('class', 'name-artist-sesion');
-      item.appendChild(artistName);
-      artistName.innerHTML = `${this.data[i].name}`;
+      const a = document.createElement('a');
+      a.setAttribute('class', 'name-artist-sesion');
+      a.setAttribute('href', 'artistlist.html');
+      a.setAttribute('target', '_blank');
+      item.appendChild(a);
+      a .innerHTML = `${this.data[i].id}`;
+      const name = `${this.data[i].name}`.innerHTML;
+      console.log(name);
     }
+    characterList.addEventListener('click', (event)=> {
+        console.log('hola',event)
+        const artistName = event.target;
+        const name = artistName.innerHTML;
+        console.log(name);
+        localStorage.setItem('nameArtist',name);
+    })
   }
 }
 export default GeneralPlayer;
