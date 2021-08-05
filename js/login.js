@@ -1,6 +1,26 @@
-/*const formCreate = document.querySelector('#form-create');
+const formCreate = document.querySelector('#form-create');
+
+function createAccount(inputsCreate){
+  fetch('http://localhost:4000/user', {
+        method: "POST",
+        body: JSON.stringify(inputsCreate),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
 
 formCreate.addEventListener('submit', (e) => {
+  console.log('hola')
   e.preventDefault();
   let inputsCreate = {
     'userName': `${formCreate.elements[0].value}`,
@@ -13,14 +33,9 @@ formCreate.addEventListener('submit', (e) => {
   formCreate.elements[3].value = "";
 
   createAccount(inputsCreate)
+
 });
 
-function createAccount(inputsCreate){
-  fetch('https://music-proyect.herokuapp.com/user')
-  .then((response) => response.json())
-  .then((data) => {
-    const data = data.id;
-    localStorage.setItem(data);
-  });
-}*/
+
+
 

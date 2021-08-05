@@ -1,4 +1,4 @@
-function validacionPassword(){
+/*function validacionPassword(){
   const formCreate = document.querySelector('#form-create');
   const message = document.querySelector('#messageError');
 
@@ -12,4 +12,4 @@ function validacionPassword(){
   })
 }
 
-validacionPassword();
+validacionPassword();*/
