@@ -9,12 +9,15 @@ let HEIGHT = canvasCtx.height;
 let counter = 0;
 
 function apiArtist(){
-  fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/gorillaz')
+  fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/aurora')
   .then((response) => response.json())
   .then((data) => {
     const currentSong = data[counter].audio;
     listSong(data, currentSong);
-
+    infoSong(data)
+  });
+}
+function infoSong(data){
     const listInfo = document.getElementById('list-info-song');
 
     const albumName = document.createElement('p');
@@ -26,8 +29,6 @@ function apiArtist(){
     songName.setAttribute('class', 'name-song');
     listInfo.appendChild(songName);
     songName.innerHTML = `Name song: ${data[counter].name}`;
-
-  });
 }
 
 function playSong(){
@@ -94,7 +95,7 @@ function canvasAnimate(musicSong){
 
   let source = audioCtx.createMediaElementSource(musicSong);
   analyser.connect(audioCtx.destination);
-  analyser.fftSize = 2048;
+  analyser.fftSize = 1024;
   source.connect(analyser);
 
   let bufferLength = analyser.frequencyBinCount;
