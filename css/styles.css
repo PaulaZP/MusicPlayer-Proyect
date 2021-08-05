@@ -3,6 +3,10 @@
   clear: both;
   display: table; }
 
+.icon img {
+  margin-top: 25px;
+  width: 118px; }
+
 .list-body {
   background: linear-gradient(117deg, #1a1f2a 0%, rgba(255, 128, 0, 0.760942) 46%);
   margin: 0px;
@@ -105,7 +109,7 @@
 
 .menu ul {
   list-style: none;
-  padding: 75px 0 0 0; }
+  padding: 35px 0 0 0; }
 
 .menu li {
   float: left;
