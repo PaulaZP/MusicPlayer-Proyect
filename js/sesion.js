@@ -1,4 +1,3 @@
-//import {apiSong, apiArtistInfo} from './apiArtist.js';
 class Songs{
   constructor(data){
     this.data = data;
@@ -31,34 +30,10 @@ class Songs{
       buttonplay.setAttribute('class', 'btn-play-artist');
       item.appendChild(buttonplay);
       buttonplay.innerHTML = `
-      <a href="#">
-        <img src="img/play.png" alt="">
+      <a href="player.html">
+        <img src="img/play.png" alt="boton play">
       </a>`;
     }
-  }
-
-  artistinfo(){
-
-      const artistInfoList = document.getElementById('artist_information');
-
-      const itemInfo = document.createElement('div');
-      itemInfo.setAttribute('class', 'item-artist-info');
-      artistInfoList.appendChild(itemInfo);
-
-      const picturArtist = document.createElement('img');
-      picturArtist.setAttribute('src', `${this.data[0].image}`);
-      picturArtist.setAttribute('class', 'picture-artist-info');
-      itemInfo.appendChild(picturArtist);
-
-      const artistName = document.createElement('p');
-      artistName.setAttribute('class', 'name-artist-info');
-      itemInfo.appendChild(artistName);
-      artistName.innerHTML = `${this.data[0].name}`;
-
-      const artisDescription = document.createElement('p');
-      artisDescription.setAttribute('class', 'name-artist-description');
-      itemInfo.appendChild(artisDescription);
-      artisDescription.innerHTML = `${this.data[0].description}`;
   }
 }
 

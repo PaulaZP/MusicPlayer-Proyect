@@ -17,19 +17,37 @@ class GeneralPlayer{
       const a = document.createElement('a');
       a.setAttribute('class', 'name-artist-sesion');
       a.setAttribute('href', 'artistlist.html');
-      a.setAttribute('target', '_blank');
       item.appendChild(a);
       a .innerHTML = `${this.data[i].id}`;
       const name = `${this.data[i].name}`.innerHTML;
       console.log(name);
     }
     characterList.addEventListener('click', (event)=> {
-        console.log('hola',event)
-        const artistName = event.target;
-        const name = artistName.innerHTML;
-        console.log(name);
-        localStorage.setItem('nameArtist',name);
+      const artistName = event.target;
+      const name = artistName.innerHTML;
+      localStorage.setItem('nameArtist',name);
     })
+  }
+  artistinfo(){
+    const artistInfoList = document.querySelector('.artist_information');
+      const itemInfo = document.createElement('div');
+      itemInfo.setAttribute('class', 'item-artist-info');
+      artistInfoList.appendChild(itemInfo);
+
+      const picturArtist = document.createElement('img');
+      picturArtist.setAttribute('src', `${this.data.image}`);
+      picturArtist.setAttribute('class', 'picture-artist-info');
+      itemInfo.appendChild(picturArtist);
+
+      const artistName = document.createElement('p');
+      artistName.setAttribute('class', 'name-artist-info');
+      itemInfo.appendChild(artistName);
+      artistName.innerHTML = `${this.data.name}`;
+
+      const artisDescription = document.createElement('p');
+      artisDescription.setAttribute('class', 'name-artist-description');
+      itemInfo.appendChild(artisDescription);
+      artisDescription.innerHTML = `${this.data.description}`;
   }
 }
 export default GeneralPlayer;
