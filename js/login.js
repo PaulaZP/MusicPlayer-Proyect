@@ -1,4 +1,4 @@
-const formCreate = document.querySelector('#form-create');
+const formCreate = document.querySelector('.form-create');
 
 function createAccount(inputsCreate){
   fetch('http://localhost:4000/user', {
