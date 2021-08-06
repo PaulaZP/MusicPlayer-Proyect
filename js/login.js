@@ -50,6 +50,7 @@ function login(inputLogin){
   })
   .then((data) => {
     console.log(data)
+    idUser();
   })
   .catch((error) => {
       console.error('Error:', error);
@@ -68,5 +69,10 @@ formLogin.addEventListener('submit', (e) => {
   login(inputLogin)
 });
 
+function idUser() {
+  /*const saveIdUser = localStorage.setItem(data.data.id);
+  console.log(saveIdUser);*/
+  window.location.href = 'home.html';
+}
 
 
