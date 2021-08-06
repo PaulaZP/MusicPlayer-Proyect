@@ -23,7 +23,50 @@
           <li><a href="player.html"><img src="./img/player.png" alt="Player"></a></li>
         </ul>
       </div>
+
+      <div>
+        <p>{User's Name}</p>
+        <a><img src="./img/pencil.png" alt="Pencil"></a>
+      </div>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Recently')">Recently Played</button>
+        <button class="tablinks" onclick="openCity(event, 'Favorites')">Your Favorites</button>
+        <button class="tablinks" onclick="openCity(event, 'Playlist')">Harry Styles 🔥😍🍉💫</button>
+      </div>
+
+      <div id="Recently" class="tabcontent">
+        <div class="songs-list">
+          <ul class="artist_list" id="artist_songs">
+            <!-- The list of the songs will be inserted here -->
+          </ul>
+        </div>
+      </div>
+
+      <div id="Favorites" class="tabcontent">
+        <div class="songs-list">
+          <ul class="artist_list" id="artist_songs">
+            <!-- The list of the songs will be inserted here -->
+          </ul>
+        </div>
+      </div>
+
+      <div id="Playlist" class="tabcontent">
+        <div class="songs-list">
+          <ul class="artist_list" id="artist_songs">
+            <!-- The list of the songs will be inserted here -->
+          </ul>
+        </div>
+      </div>
+
+      <div id="newinfo" class="clearfix">
+        <ul id="lista">
+
+        </ul>
+      </div>
     </div>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/sesion.js"></script>
   </body>
 </html>
 
