@@ -6,17 +6,17 @@ function createAccount(inputsCreate){
     method: "POST",
     body: JSON.stringify(inputsCreate),
     headers: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     },
   })
   .then((response) => {
-      return response.json();
+    return response.json();
   })
   .then((data) => {
     console.log(data)
   })
   .catch((error) => {
-      console.error('Error:', error);
+    console.error('Error:', error);
   });
 }
 
@@ -42,18 +42,18 @@ function login(inputLogin){
     method: "POST",
     body: JSON.stringify(inputLogin),
     headers: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     },
   })
   .then((response) => {
-      return response.json();
+    return response.json();
   })
   .then((data) => {
     console.log(data)
-    idUser();
+    idUser(data);
   })
   .catch((error) => {
-      console.error('Error:', error);
+    console.error('Error:', error);
   });
 }
 
@@ -69,10 +69,8 @@ formLogin.addEventListener('submit', (e) => {
   login(inputLogin)
 });
 
-function idUser() {
-  /*const saveIdUser = localStorage.setItem(data.data.id);
-  console.log(saveIdUser);*/
+function idUser(data) {
+  const saveIdUser = localStorage.setItem('userId',data.id);
+  console.log(saveIdUser);
   window.location.href = 'home.html';
 }
-
-
