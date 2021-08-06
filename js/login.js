@@ -37,8 +37,13 @@ formCreate.addEventListener('submit', (e) => {
 
 
 function login(inputLogin){
-  fetch(`http://localhost:4000/user/${inputLogin}/email`, {
-    method: "GET"
+  console.log(inputLogin.email)
+  fetch('http://localhost:4000/users/login', {
+    method: "POST",
+    body: JSON.stringify(inputLogin),
+    headers: {
+        'Content-Type': 'application/json'
+    },
   })
   .then((response) => {
       return response.json();
