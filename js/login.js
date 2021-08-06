@@ -1,22 +1,23 @@
 const formCreate = document.querySelector('.form-create');
+const formLogin = document.querySelector('.form-sing');
 
 function createAccount(inputsCreate){
   fetch('http://localhost:4000/user', {
-        method: "POST",
-        body: JSON.stringify(inputsCreate),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    })
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-          console.log(data)
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+    method: "POST",
+    body: JSON.stringify(inputsCreate),
+    headers: {
+        'Content-Type': 'application/json'
+    },
+  })
+  .then((response) => {
+      return response.json();
+  })
+  .then((data) => {
+    console.log(data)
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+  });
 }
 
 formCreate.addEventListener('submit', (e) => {
@@ -35,5 +36,43 @@ formCreate.addEventListener('submit', (e) => {
 });
 
 
+function login(inputLogin){
+  console.log(inputLogin.email)
+  fetch('http://localhost:4000/users/login', {
+    method: "POST",
+    body: JSON.stringify(inputLogin),
+    headers: {
+        'Content-Type': 'application/json'
+    },
+  })
+  .then((response) => {
+      return response.json();
+  })
+  .then((data) => {
+    console.log(data)
+    idUser();
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+  });
+}
+
+formLogin.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let inputLogin = {
+    'email': `${formLogin.elements[0].value}`,
+    'password': `${formLogin.elements[1].value}`
+  }
+  formLogin.elements[0].value = "";
+  formLogin.elements[1].value = "";
+
+  login(inputLogin)
+});
+
+function idUser() {
+  /*const saveIdUser = localStorage.setItem(data.data.id);
+  console.log(saveIdUser);*/
+  window.location.href = 'home.html';
+}
 
 
