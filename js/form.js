@@ -1,5 +1,5 @@
 function validacionPassword(){
-  const formCreate = document.querySelector('.form-create');
+  const formCreate = document.querySelector('#form-create');
   const message = document.querySelector('#messageError');
 
   formCreate.addEventListener('submit', (e) => {
