@@ -101,33 +101,31 @@
       margin: 0 auto;
       width: 70%; } }
 
-.tab {
-  float: left;
-  background-color: #F6F6F6;
-  width: 26%;
-  height: 400px; }
+#recently {
+  margin-top: 86px; }
 
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer; }
+.playlist-name {
+  border-bottom: 1px solid white;
+  width: 350px; }
 
-.tab button:hover {
-  background-color: #ddd; }
+#user-name {
+  margin-top: 40px; }
 
-.tab button.active {
-  background-color: #ccc; }
+#pencil {
+  float: right;
+  margin-top: -40px;
+  width: 24px; }
 
-.tabcontent {
-  float: left;
-  width: 300px;
-  height: 300px; }
+#create-playlist {
+  width: 350px; }
+  #create-playlist img {
+    width: 30px;
+    margin-top: 20px;
+    float: right; }
+
+.songs-playlist {
+  float: right;
+  width: 400px; }
 
 .canvasAnimate {
   max-width: 100%;
