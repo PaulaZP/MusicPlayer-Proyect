@@ -19,6 +19,7 @@ function apiArtist(){
 }
 function infoSong(data){
     const listInfo = document.getElementById('list-info-song');
+    listInfo.innerHTML = "";
 
     const albumName = document.createElement('p');
     albumName.setAttribute('class', 'name-album');
@@ -53,6 +54,7 @@ function nextSong(data) {
     }
     const actualCount = counter++;
     if(actualCount < data.length){
+      infoSong(data);
       musicSong.src = data[actualCount].audio;
       musicSong.play();
     }else{
@@ -70,6 +72,7 @@ function previousSong(data) {
     }
     const actualCount = counter--;
     if(actualCount < data.length){
+      infoSong(data);
       musicSong.src = data[actualCount].audio;
       musicSong.play();
     }else{

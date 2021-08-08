@@ -3,7 +3,7 @@ const formLogin = document.querySelector('.form-sing');
 const message = document.querySelector('#messageError');
 
 function createAccount(inputsCreate){
-  fetch('http://localhost:4000/user', {
+  fetch('https://music-proyect.herokuapp.com/user', {
     method: "POST",
     body: JSON.stringify(inputsCreate),
     headers: {
@@ -43,7 +43,7 @@ formCreate.addEventListener('submit', (e) => {
 
 
 function login(inputLogin){
-  fetch('http://localhost:4000/users/login', {
+  fetch('https://music-proyect.herokuapp.com/users/login', {
     method: "POST",
     body: JSON.stringify(inputLogin),
     headers: {
