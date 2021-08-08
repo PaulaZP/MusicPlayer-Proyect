@@ -119,9 +119,9 @@
 #create-playlist {
   width: 350px; }
   #create-playlist img {
-    width: 30px;
+    float: right;
     margin-top: 20px;
-    float: right; }
+    width: 30px; }
 
 .songs-playlist {
   float: right;
